@@ -6,6 +6,8 @@
 pub mod connectivity;
 pub mod flow;
 pub mod util;
+pub mod skip_list;
+pub mod ring_buffer;
 
 /// Represents a union of disjoint sets. Each set's elements are arranged in a
 /// tree, whose root is the set's representative.

@@ -13,3 +13,7 @@ license = "MIT"
 
 [badges]
 travis-ci = { repository = "EbTech/rust-algorithms", branch = "master" }
+
+
+[dependencies]
+rand = "^0"
