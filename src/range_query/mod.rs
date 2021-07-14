@@ -2,9 +2,12 @@ pub mod dynamic_arq;
 pub mod specs;
 pub mod sqrt_decomp;
 pub mod static_arq;
+pub mod radix_tree;
+pub mod list;
 pub use dynamic_arq::{ArqView, DynamicArq};
 pub use specs::ArqSpec;
 pub use static_arq::StaticArq;
+// use radix_trie::{Trie, TrieCommon};
 
 #[cfg(test)]
 mod test {
@@ -128,6 +131,24 @@ mod test {
 
         assert_eq!(first_neg, Some(3));
         assert_eq!(first_neg_zeros, None);
+    }
+
+    // #[test]
+    // fn test_rb_trie() {
+    //     let mut t = Trie::new();
+    //     t.insert("a",2);
+    //     t.insert("b",3);
+    //     let ab_sum = t.get_raw_ancestor(&"ab").children().fold(0,|acc,c|{
+    //         println!("Iterating over child with value {:?}",c.value());
+    //         acc+*c.value().unwarp_or(&0)
+    //     });
+    //     println!("{}", ab_sum);
+    //     assert_eq!(ab_sum,2+3);
+    // }
+
+    #[test]
+    fn test_list() {
+        
     }
 
     #[test]
